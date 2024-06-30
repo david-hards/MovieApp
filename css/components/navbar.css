@@ -1,0 +1,35 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Items will be spaced apart with left and right alignment */
+    align-items: center; /* Vertically center items */
+    font-family: sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    font-size: 1em;
+    padding-right: 15px;
+    padding-left: 15px;
+    color: black;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+  
+  }
+  
+  li {
+    margin-right: 1rem;
+    text-decoration: none;
+  }
+  
+  /* Push the last item (Logout) to the right */
+  .navbar li:last-child {
+    margin-left: auto;
+  }
+  
+  

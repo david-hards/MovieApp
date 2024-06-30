@@ -7,6 +7,7 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/components/navbar.css">
+    <link rel="stylesheet" href="/css/account/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="An App for Movie selection.">
     <meta name="theme-color" content="white" />
@@ -28,16 +29,26 @@
         </div>
 
         <div class="main-container">
-            <h1 class="title">Movie Nest</h1>
-            <img src="/images/reel128.png" alt="icon of a movie reel">
-            <br>
-            <button class="btn-input" id="btn-get-started">Get started!</button>
+
+            <div class="login-container">
+                <h1>Sign In</h1>
+                <br>
+                <input type="email" class="login-input" id="login-email" placeholder="Enter email...">
+                <br>
+                <input type="password" class="login-input" id="login-password" placeholder="Enter password...">
+                <br>
+                <p>Not a member? <a href="/html/account/register.html">Sign up.</a></p>
+                <br>
+                <p id="login-error-text"></p>
+                <button class="login-input" id="btn-login-submit">Submit</button>
+            </div>
+
         </div>
     </div>
 
-    <script src="/js/supabase/supabase.js" type="module"></script>
-    <script src="/js/main.js" defer></script>
-    <script src="/js/pages/index.js" defer></script>
+    <!-- <script src="/js/main.js" defer></script> -->
+    <script src="/js/account/login.js" defer></script>
+
 </body>
 
 </html>

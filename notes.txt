@@ -5,6 +5,10 @@
 
 - Add name to login/register form 
 
+ONCE ACC SYSTEM IS WORKING:
+- Consolidate js with DRY, ie hash password
+- Consolidate css with DRY ie classes that span all pages
+
 MUST HAVES:
 - Search for a single word and return matching movies
 - Search genres

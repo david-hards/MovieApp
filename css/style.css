@@ -37,6 +37,18 @@ body {
   color: rebeccapurple;
 }
 
+.btn-input {
+  padding: 10px;
+  border: 2px solid rebeccapurple;
+  margin: 15px;
+  background-color: rebeccapurple;
+  /* Ensure the input text color is black */
+  color: white;
+  /* Remove the default focus outline */
+  outline: none;
+  font-size: 1.2em;
+}
+
 
 
 
