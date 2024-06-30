@@ -1,0 +1,12 @@
+- https://medium.com/james-johnson/a-simple-progressive-web-app-tutorial-f9708e5f2605
+(need png content added to index.html header)
+
+- Need to verify register and login email regex is correct
+
+- Add name to login/register form 
+
+
+
+NICE TO HAVES LATER:
+- Add password reset form/page
+- Add password change form/page

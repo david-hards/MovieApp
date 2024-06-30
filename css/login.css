@@ -1,0 +1,32 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    /* background-color: aqua; */
+    margin: auto;
+    justify-content: center;
+}
+
+.login-input {
+    padding: 5px;
+    border: 0;
+    border-bottom: 2px solid black;
+    margin: 15px;
+    background-color: transparent;
+    /* Ensure the input text color is black */
+    color: black;
+    /* Remove the default focus outline */
+    outline: none;
+    font-size: 1.2em;
+}
+
+#btn-login-submit {
+    border: 2px solid black;
+}
+
+/* .login-input:focus {
+    background-color: rebeccapurple;
+    color: white;
+} */

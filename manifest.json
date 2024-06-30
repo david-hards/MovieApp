@@ -1,0 +1,41 @@
+{
+    "name": "Movie:List",
+    "short_name": "Movie:List",
+    "icons": [
+        {
+            "src": "/images/reel128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/reel144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/reel152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/reel192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/reel256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/reel512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "lang": "en-US",
+    "start_url": "/html/index.html",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "rebeccapurple"
+}
