@@ -5,6 +5,12 @@
 
 - Add name to login/register form 
 
+MUST HAVES:
+- Search for a single word and return matching movies
+- Search genres
+- Select from the above, add to a personal list.
+- Add your list to a group, rate/score the group movies
+- Create a group watchlist in order
 
 
 NICE TO HAVES LATER:
