@@ -1,5 +1,5 @@
-import { createUser } from '/js/supabase.js';
-import { sha256 } from "/js/supabase.js";
+import { createUser } from '/js/supabase/supabase.js';
+// import { sha256 } from '/js/supabase/supabase.js';
 
 let errortext = document.getElementById('register-error-text');
 const registerForm = document.querySelector('.register-container');
@@ -36,8 +36,5 @@ function verifyRegisterInputs(){
         return;
     }
 
-    sha256(password).then(hash => {
-        console.log('SHA-256 hash:', hash);
-        createUser(email, password); // use hash version once debugged
-      }).catch(err => console.error('Error calculating SHA-256 hash:', err));
+    createUser(email, password);
 }

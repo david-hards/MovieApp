@@ -1,3 +1,5 @@
+import { login } from "/js/supabase/supabase.js";
+
 let errortext = document.getElementById('login-error-text');
 const loginForm = document.querySelector('.login-container');
 const btnSubmit = document.getElementById('btn-login-submit');
@@ -17,19 +19,19 @@ loginForm.addEventListener('keydown', (event) => {
 
 function verifyloginInputs(){
     let email = document.getElementById('login-email');
-    let emailConfirm = document.getElementById('login-email-confirm');
     let password = document.getElementById('login-password');
-    let passwordConfirm = document.getElementById('login-password-confirm');
 
-    if(email.value != null){ // Replace with real logic for login ie api.login return bool
-        errortext.innerText = 'Invalid credentials. Please try again.';
+    if(email.value == ''){
+        errortext.innerText = 'Please enter an email address.';
         return;
     }
 
-    if(password.value != null){ // Replace with real logic for login ie api.login return bool
-        errortext.innerText = 'Invalid credentials. Please try again.';
+    if(password.value == ''){ // Replace with real logic for login ie api.login return bool
+        errortext.innerText = 'Please enter a password.';
         return;
     }
 
-    console.log(`pw: ${password.value}, pwc: ${passwordConfirm.value}, em: ${email.value}, emc: ${emailConfirm.value}`)
+    console.log(`pw: ${password.value}, em: ${email.value}`)
+    let result = login(email, password)
+    console.log(result)
 }

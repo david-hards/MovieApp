@@ -6,7 +6,6 @@
 - Add name to login/register form 
 
 ONCE ACC SYSTEM IS WORKING:
-- Consolidate js with DRY, ie hash password
 - Consolidate css with DRY ie classes that span all pages
 
 MUST HAVES:
@@ -20,3 +19,15 @@ MUST HAVES:
 NICE TO HAVES LATER:
 - Add password reset form/page
 - Add password change form/page
+
+(Send a password reset link to an email address)
+- https://supabase.com/docs/reference/javascript/auth-resetpasswordforemail
+
+(Update the users password)
+- https://supabase.com/docs/reference/javascript/auth-updateuser
+
+(Case where register user is already created - no feedback given)
+
+(Create link to password reset in website for supabase)
+
+(Allow next page on search results)
