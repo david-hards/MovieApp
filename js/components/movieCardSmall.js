@@ -1,10 +1,12 @@
+import { searchForMovieByID } from '/js/omdb/movieInfo.js';
+
 class MovieCardSmall {
     constructor(movie) {
         this.movie = movie;
     }
 
     createCardSmall() {
-        const { Title, Year, imdbID, Poster } = this.movie;
+        const { Title, Year, imdbID } = this.movie;
         let score = 85;
     
         // Create main movie card container
@@ -36,8 +38,7 @@ class MovieCardSmall {
         moreInfoButton.textContent = 'More info';
         moreInfoButton.classList.add('card-btn-more');
         moreInfoButton.addEventListener('click', () => {
-            console.log('MORE: Movie ID: ', imdbID);
-            window.location.href = `/html/pages/movie.html?imdbID=${imdbID}`;
+            searchForMovieByID(imdbID);
         });
     
         // Add button
