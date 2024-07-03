@@ -1,0 +1,33 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Set the height of search-container to full viewport height */
+    overflow: hidden; /* Prevents content from overflowing the container */
+    padding: 20px; /* Adds some padding around the content */
+    box-sizing: border-box; /* Ensures padding is included in width and height */
+}
+
+#search-results-container {
+    /* background-color: cornflowerblue; */
+    overflow-y: auto;
+    width: 30%; /* Ensure it takes full width - change if it looks unco*/
+    padding: 10px;
+}
+
+.search-input {
+    padding: 5px 10px;
+    border: 0;
+    border-bottom: 2px solid black;
+    margin: 15px;
+    background-color: transparent;
+    color: black;
+    outline: none;
+    font-size: 1.2em;
+}
+
+#btn-search-submit {
+    border: 2px solid black;
+}

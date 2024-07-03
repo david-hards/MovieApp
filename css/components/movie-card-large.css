@@ -1,0 +1,61 @@
+.movie-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Image column and details column */
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 10px; /* Gap between grid items */
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0px 0px 20px -10px black;
+}
+
+.card-title {
+    grid-column: span 2; /* Span across both columns */
+    font-size: 1.5em; /* Larger font size for title */
+}
+
+.card-details {
+    grid-column: 2;
+}
+
+.card-year {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.card-score {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.card-details {
+    grid-column: span 2;
+    grid-row: 3;
+}
+
+.card-btn-add {
+    grid-column: 2;
+    grid-row: 4;   
+}
+
+.card-btn-add:hover {
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.card-btn-more {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: transparent;
+    color: black;
+    outline: none;
+    font-size: 1.2em;
+    border: 2px solid black;
+    cursor: pointer;
+    
+} 

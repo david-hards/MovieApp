@@ -33,5 +33,5 @@ function verifyloginInputs(){
 
     console.log(`pw: ${password.value}, em: ${email.value}`)
     let result = login(email, password)
-    console.log(result)
+    console.log("login result: ", result)
 }

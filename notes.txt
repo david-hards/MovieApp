@@ -31,3 +31,5 @@ NICE TO HAVES LATER:
 (Create link to password reset in website for supabase)
 
 (Allow next page on search results)
+
+(create separate classes for login verify things like password format and is input null?)

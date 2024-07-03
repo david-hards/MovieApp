@@ -60,21 +60,6 @@ async function login(userEmail, userPassword){
 
 }
 
-// async function sha256(str) {
-//   // Convert the input string to a Uint8Array
-//   const msgUint8 = new TextEncoder().encode(str);
-
-//   // Use the built-in crypto.subtle digest method to create a SHA-256 hash
-//   const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
-
-//   // Convert the hash buffer to a hexadecimal string
-//   const hashArray = Array.from(new Uint8Array(hashBuffer));
-//   const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
-
-//   return hashHex;
-// }
-
 export { createUser };
 export { logout };
 export { login };
-// export { sha256 };
