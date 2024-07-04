@@ -6,7 +6,7 @@ class MovieCardSmall {
     }
 
     createCardSmall() {
-        const { Title, Year, imdbID } = this.movie;
+        const { Title, Year, imdbID, Poster } = this.movie;
         let score = 85;
     
         // Create main movie card container
@@ -22,16 +22,11 @@ class MovieCardSmall {
         const year = document.createElement('p');
         year.textContent = `Year: ${Year}`;
         year.classList.add('card-year');
-    
-        // Score element
-        const scoreElement = document.createElement('p');
-        scoreElement.textContent = `${score}%`;
-        scoreElement.classList.add('card-score');
-    
-        // Details element
-        const details = document.createElement('p');
-        details.textContent = 'Details are written here';
-        details.classList.add('card-details');
+
+        // Image element
+        const image = document.createElement('img');
+        image.src = Poster;
+        image.classList.add('card-image');
     
         // More info button
         const moreInfoButton = document.createElement('button');
@@ -53,8 +48,7 @@ class MovieCardSmall {
         // Append elements to movie card
         card.appendChild(title);
         card.appendChild(year);
-        card.appendChild(scoreElement);
-        card.appendChild(details);
+        card.appendChild(image);
         card.appendChild(moreInfoButton);
         card.appendChild(addButton);
 

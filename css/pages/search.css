@@ -11,9 +11,9 @@
 }
 
 #search-results-container {
-    /* background-color: cornflowerblue; */
+    display: flex;
     overflow-y: auto;
-    width: 30%; /* Ensure it takes full width - change if it looks unco*/
+    width: 90vw; /* Ensure it takes full width - change if it looks unco*/
     padding: 10px;
 }
 
