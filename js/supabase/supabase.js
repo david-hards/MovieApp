@@ -50,12 +50,14 @@ async function login(userEmail, userPassword){
       email: userEmail,
       password: userPassword,
     })
-    if(data.error == null)
+    console.log(data.session.user.id)
+    if(data.session.user.id != null)
       return "pass";
     else
+    console.log('Login error: ', error)
       return "fail";
   } catch {
-    console.error('Error signing in:', error.message)
+    console.error('Error signing in.')
   }
 
 }

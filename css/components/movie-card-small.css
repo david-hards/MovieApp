@@ -1,14 +1,18 @@
 .movie-card {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Image column and details column */
-    grid-template-rows: 1fr 1fr 1fr auto;
-    grid-gap: 10px; /* Gap between grid items */
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: auto auto auto auto; /* Four rows */
+    grid-gap: 10px;
     margin: 10px;
     border: 1px solid #ccc;
     padding: 10px;
     box-shadow: 0px 0px 20px -10px black;
-    /* width: 300px;
-    height: 300px; */
+    width: 33%; /* Limit the width of each card to 45% of the container */
+    /* min-width: 320px; /* Minimum width to ensure cards don't become too narrow */
+    /* max-width: 320px; /* Maximum width to control card width */
+    width: 300px;
+    
+    /* height: 100%; Remove fixed height to allow cards to expand vertically based on content */
 }
 
 .card-title {
@@ -40,12 +44,26 @@
 .card-image {
     grid-column: span 2;
     grid-row: 4;
+    height: 100%; /* Ensure the card-image takes full height of its grid cell */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-image img {
-    width: 100%;
-    height: 100%; 
+    max-width: 100%;
+    max-height: 100%; 
     object-fit: contain;
+}
+
+#search-results-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center; /* Center align the cards horizontally */
+    gap: 20px; /* Space between cards */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 200px); /* Limit the height to the viewport minus some padding */
+    padding: 10px;
 }
 
 button {
@@ -57,5 +75,4 @@ button {
     font-size: 1.2em;
     border: 2px solid black;
     cursor: pointer;
-    
 } 

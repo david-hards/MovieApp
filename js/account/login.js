@@ -6,32 +6,37 @@ const btnSubmit = document.getElementById('btn-login-submit');
 
 btnSubmit.addEventListener('click', ()=> {
     console.log('clicked')
-    verifyloginInputs();
+    verifyLoginInputs();
 })
 
 loginForm.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
         event.preventDefault();
-        // verifyloginInputs();
-        console.log('enter pressed');
+        verifyLoginInputs();
     }
 });
 
-function verifyloginInputs(){
-    let email = document.getElementById('login-email');
-    let password = document.getElementById('login-password');
+async function verifyLoginInputs(){
+    let email = document.getElementById('login-email').value;
+    let password = document.getElementById('login-password').value;
 
-    if(email.value == ''){
+    if(email == ''){
         errortext.innerText = 'Please enter an email address.';
         return;
     }
 
-    if(password.value == ''){ // Replace with real logic for login ie api.login return bool
+    if(password == ''){
         errortext.innerText = 'Please enter a password.';
         return;
     }
 
-    console.log(`pw: ${password.value}, em: ${email.value}`)
-    let result = login(email, password)
-    console.log("login result: ", result)
+    console.log(`pw: ${password}, em: ${email}`);
+    try {
+        let result = await login(email, password);
+        console.log("login result: ", result);
+        window.location.replace('/html/pages/list.html');
+    } catch (error) {
+        console.error('Error logging in:', error.message);
+        // Handle specific errors or show user-friendly messages
+    }
 }
