@@ -33,3 +33,7 @@ NICE TO HAVES LATER:
 (Allow next page on search results)
 
 (create separate classes for login verify things like password format and is input null?)
+
+verifyEmail.js needs to have the correct regex etc
+
+if sign-up successful, show dialog or move to login screen

@@ -1,5 +1,6 @@
 import { createUser } from '/js/supabase/supabase.js';
-// import { sha256 } from '/js/supabase/supabase.js';
+import { verifyEmail } from "/js/account/verify.js";
+
 
 let errortext = document.getElementById('register-error-text');
 const registerForm = document.querySelector('.register-container');
@@ -13,7 +14,7 @@ btnSubmit.addEventListener('click', ()=> {
 registerForm.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
         event.preventDefault();
-        // verifyRegisterInputs();
+        verifyRegisterInputs();
         console.log('enter pressed');
     }
 });
@@ -24,10 +25,25 @@ function verifyRegisterInputs(){
     let password = document.getElementById('register-password').value;
     let passwordConfirm = document.getElementById('register-password-confirm').value;
 
-    console.log(`pw: ${password}, pwc: ${passwordConfirm}, em: ${email}, emc: ${emailConfirm}`)
+    console.log(`REGISTER: pw: ${password}, pwc: ${passwordConfirm}, em: ${email}, emc: ${emailConfirm}`)
+
+    if(email == '' || emailConfirm == ''){
+        errortext.innerText = 'Please enter an email address.';
+        return;
+    }
+
+    if(verifyEmail(email) == false || verifyEmail(emailConfirm) == false) {
+        errortext.innerText = 'Please enter a valid email address.';
+        return;
+    }
 
     if(email != emailConfirm){
         errortext.innerText = 'Emails do not match. Please try again.';
+        return;
+    }
+
+    if(password == '' || passwordConfirm == ''){
+        errortext.innerText = 'Please enter a password.';
         return;
     }
 
@@ -35,6 +51,8 @@ function verifyRegisterInputs(){
         errortext.innerText = 'Passwords do not match. Please try again.';
         return;
     }
+
+    console.log('user created')
 
     createUser(email, password);
 }

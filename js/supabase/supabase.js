@@ -35,9 +35,10 @@ async function logout() {
 
     if (error) {
         console.error('Error signing out:', error.message);
+        return false;
     } else {
         console.log('Successfully logged out');
-  
+        return true;
     }
   } catch {
     console.error('Error logging out: ', error.message);
@@ -52,16 +53,27 @@ async function login(userEmail, userPassword){
     })
     console.log(data.session.user.id)
     if(data.session.user.id != null)
-      return "pass";
+      return true;
     else
     console.log('Login error: ', error)
-      return "fail";
+      return false;
   } catch {
     console.error('Error signing in.')
   }
+}
 
+async function getUser() {
+  try {
+    const { data: { user } } = await supabase.auth.getUser();
+
+    console.log(`${user.id} has email ${user.email}`);
+  }
+  catch {
+    console.error('error getting user');
+  }
 }
 
 export { createUser };
 export { logout };
 export { login };
+export { getUser };
