@@ -1,5 +1,5 @@
 import movieCardSmall from '/js/components/movieCardSmall.js';
-import movieCardLarge from '/js/components/MovieCardLarge.js';
+import movieCardLarge from '/js/components/movieCardLarge.js';
 
 
 const apiKey = "af3045bd";

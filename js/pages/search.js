@@ -1,4 +1,5 @@
 import { searchForMoviesByTitle } from "/js/omdb/movieInfo.js";
+import {showData} from "../moviedatabase/database.js";
 
 const searchButton = document.getElementById('btn-search-submit');
 const searchInput = document.getElementById('search-input');
@@ -20,7 +21,8 @@ function submitSearch(){
 
     if(title != ''){
         errorText.innerText = '';
-        searchForMoviesByTitle(title);
+        //searchForMoviesByTitle(title);
+        showData(title);
     }
     else {
         errorText.innerText = 'Please enter a value.';
