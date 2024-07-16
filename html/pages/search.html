@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/components/navbar.css">
     <link rel="stylesheet" href="/css/pages/search.css">
     <link rel="stylesheet" href="/css/components/movie-card-small.css">
+    <link rel="stylesheet" href="/css/components/movie-card-large.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="An App for Movie selection.">
     <meta name="theme-color" content="white" />
@@ -31,9 +32,9 @@
 
         <div class="main-container">
             <div class="search-container">
-                <h1>Search</h1>
                 <br>
-                <input type="search" class="search-input" id="search-input" placeholder="Search for movie...">
+                <label for="search-input">Search</label>
+                <input type="search" class="search-input" id="search-input" placeholder="Enter movie title...">
                 <br>
                 <p id="search-error-text"></p>
                 <button class="search-input" id="btn-search-submit">Submit</button>
@@ -42,14 +43,13 @@
 
                 </div>
             </div>
-
         </div>
+
     </div>
 
-    <script src="/js/omdb/movieInfo.js" type="module" defer></script>
     <script src="/js/pages/search.js" type="module" defer></script>
     <script src="/js/components/movieCardSmall.js" type="module" defer></script>
-    <script src="/js/supabase/supabase.js" type="module" defer></script>
+    <script src="/js/components/movieCardLarge.js" type="module" defer></script>
 
 </body>
 

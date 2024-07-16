@@ -31,3 +31,10 @@
 #btn-search-submit {
     border: 2px solid black;
 }
+
+label {
+    font-size: 2em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}

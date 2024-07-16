@@ -37,3 +37,7 @@ NICE TO HAVES LATER:
 verifyEmail.js needs to have the correct regex etc
 
 if sign-up successful, show dialog or move to login screen
+
+redirect pages to login screen if user has not been authed ie mylist, groups etc
+
+when searching a new movie, the screen does not auto scroll back to the top

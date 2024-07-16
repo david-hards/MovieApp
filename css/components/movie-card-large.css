@@ -1,51 +1,56 @@
-.movie-card {
+.movie-card-large {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Image column and details column */
-    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr; /* Image column and details column */
+    grid-template-rows: auto auto auto min-content auto;
     grid-gap: 10px; /* Gap between grid items */
     margin: 10px;
     border: 1px solid #ccc;
     padding: 10px;
-    box-shadow: 0px 0px 20px -10px black;
+    box-shadow: 0 0 20px -10px black;
 }
 
-.card-title {
-    grid-column: span 2; /* Span across both columns */
+.large-card-title {
+    grid-row: 1;
+    grid-column: span 3; /* Span across both columns */
     font-size: 1.5em; /* Larger font size for title */
 }
 
-.card-details {
-    grid-column: 2;
-}
-
-.card-year {
-    grid-column: 1;
+.large-card-tagline {
     grid-row: 2;
-}
-
-.card-score {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.card-details {
     grid-column: span 2;
+}
+
+.large-card-year {
     grid-row: 3;
+    grid-column: 1;
 }
 
-.card-btn-add {
+.large-card-runtime {
+    grid-row: 3;
     grid-column: 2;
-    grid-row: 4;   
+    text-align: center;
 }
 
-.card-btn-add:hover {
+.large-card-score {
+    grid-row: 3;
+    grid-column: 3;
+    text-align: right;
+}
+
+.large-card-summary {
+    grid-row: 4;
+    grid-column: span 3;
+}
+
+.large-card-btn-add {
+    grid-row: 5;
+    grid-column: 3;
+    margin-left: auto;
+}
+
+.large-card-btn-add:hover {
     background-color: rebeccapurple;
     color: white;
-}
-
-.card-btn-more {
-    grid-column: 1;
-    grid-row: 4;
 }
 
 button {
@@ -57,4 +62,5 @@ button {
     font-size: 1.2em;
     border: 2px solid black;
     cursor: pointer;
+    width: 110px;
 } 
